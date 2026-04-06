@@ -1,0 +1,11 @@
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d "$ZINIT_HOME" ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+
+source "${ZINIT_HOME}/zinit.zsh"
+
+ZINIT_SCRIPTS_DIR="${HOME}/zsh-scripts"
+
+source "${ZINIT_SCRIPTS_DIR}/plugins.sh"
+
+unset ZINIT_SCRIPTS_DIR
