@@ -1,9 +1,9 @@
 function run() {
   local CONFIG_FILE="$HOME/.gnupg/gpg-agent.conf"
   case "${_pkg_mgr}" in
-  apt)
-    sudo apt update
-    sudo apt install -y pinentry-gnome3
+  apt-get)
+    sudo apt-get update
+    sudo apt-get install -y pinentry-gnome3
     mkdir -p "$(dirname "$CONFIG_FILE")"
     echo "pinentry-program /usr/bin/pinentry-gnome3" >>"$CONFIG_FILE"
     ;;

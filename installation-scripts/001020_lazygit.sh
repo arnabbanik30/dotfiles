@@ -2,8 +2,8 @@
 
 function run() {
   case "${_pkg_mgr}" in
-  apt)
-    #I need to do this for mint. As apt in mint doesn't package lazygit. idk why tf not.
+  apt-get)
+    #I need to do this for mint. As apt-get in mint doesn't package lazygit. idk why tf not.
     local ARCH=$(uname -m)
     [ "$ARCH" = "aarch64" ] && ARCH="arm64"
     local LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | jq -r '.tag_name | sub("^v"; "")')

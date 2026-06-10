@@ -1,8 +1,8 @@
 function run() {
   case "${_pkg_mgr}" in
-  apt)
-    sudo apt update
-    sudo apt install -y stow
+  apt-get)
+    sudo apt-get update
+    sudo apt-get install -y stow
     ;;
   brew) brew install stow ;;
   *)

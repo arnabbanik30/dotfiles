@@ -1,6 +1,6 @@
 function run() {
   case "${_pkg_mgr}" in
-  apt)
+  apt-get)
     local ARCH=$(uname -m)
     [ "$ARCH" = "aarch64" ] && ARCH="arm64"
 

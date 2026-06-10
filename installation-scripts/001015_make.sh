@@ -1,6 +1,6 @@
 function run() {
   case "${_pkg_mgr}" in
-  apt-get) sudo apt install -y make ;;
+  apt-get) sudo apt-get install -y make ;;
   brew) brew install make ;;
   *)
     echo "Unknown package manager ${_pkg_mgr}"

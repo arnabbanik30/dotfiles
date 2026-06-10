@@ -2,7 +2,7 @@
 
 function run() {
 	case "${_pkg_mgr}" in
-	apt) sudo apt install -y git ;;
+	apt-get) sudo apt-get install -y git ;;
 	brew) brew install git ;;
 	*)
 		echo "Unknown package manager ${_pkg_mgr}"

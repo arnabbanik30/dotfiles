@@ -1,8 +1,8 @@
 function run() {
   case "${_pkg_mgr}" in
-  apt)
-    sudo apt update
-    sudo apt install -y gnupg
+  apt-get)
+    sudo apt-get update
+    sudo apt-get install -y gnupg
     ;;
   brew) brew install gnupg ;;
   *)

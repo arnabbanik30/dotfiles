@@ -1,6 +1,6 @@
 function run() {
   case "${_pkg_mgr}" in
-  apt) sudo apt install -y jq ;;
+  apt-get) sudo apt-get install -y jq ;;
   brew) brew install jq ;;
   *)
     echo "Unknown package manager ${_pkg_mgr}"
