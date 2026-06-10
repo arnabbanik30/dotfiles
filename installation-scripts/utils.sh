@@ -1,7 +1,8 @@
 function __set_pkg_mgr() {
-  for pkg in brew apt pacman; do
+  for pkg in apt-get pacman brew; do
     if command -v $pkg >/dev/null 2>&1; then
       _pkg_mgr=$pkg
+      break
     fi
   done
 }
