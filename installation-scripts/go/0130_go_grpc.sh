@@ -22,11 +22,16 @@ function install_go_generator() {
 
 function __install_protoc_plugins() {
   if ! __is_installed "go"; then
-    echo "[error]: Go is required for installing go grpc plugins, Skipping..."
-    return 0
+    echo "[error:go_grpc]: Go is required for installing go grpc plugins, Skipping..."
+    return 1
   fi
 
-  ## Protobuf compiler
+  if ! __is_installed "protoc"; then
+    echo "[warn:go_grpc]: Protoc should have been installed, Skipping..."
+    return 1
+  fi
+
+  ## Protobuf compiler go
   install_protoc
 
   ## Go code generator
